@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "start": "node --watch ./dist/index.js",
+    "run":"pnpm run -w backend dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@rslib/core": "^0.1.0",
+    "@types/node": "^22.8.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  },
+  "private": true
+}
