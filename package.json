@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"lage dev"
+    "build": "lage build",
+    "dev": "pnpm --filter backend watch",
+    "start": "pnpm --filter backend start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lage": "^2.11.15"
+    "lage": "^2.11.15",
+    "nodemon": "^3.1.7"
   }
 }

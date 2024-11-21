@@ -7,15 +7,21 @@
     "check": "biome check --write",
     "dev": "rslib build --watch",
     "format": "biome format --write",
-    "start": "node --watch ./dist/index.js",
-    "run":"pnpm run -w backend dev"
+    "start": "node ./dist/index.js",
+    "watch": "nodemon -e ts --watch src --exec 'pnpm run build && pnpm start'"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
     "@rslib/core": "^0.1.0",
-    "@types/node": "^22.8.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.1",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
 }

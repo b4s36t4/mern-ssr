@@ -1,7 +1,9 @@
 module.exports = {
   pipeline: {
-    dev: ["^dev"],
-    test: ["build"],
-    lint: [],
+    build: ["^build"],
+    dev: {
+      outputs: ["dist"],
+      dependsOn: ["build"],
+    },
   },
 };
